@@ -1,0 +1,530 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* start-header */
+header {
+
+    min-height: 100vh;
+    background-image: url(../images/23.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 40%;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    margin: 0px auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    z-index: 1;
+    /* نظام الطبقات*/
+    position: fixed;
+    /*ثبات العنصر في الصفحه*/
+}
+
+.log {
+    height: 58px;
+    margin-top: 10px;
+}
+
+.min-nav {
+    /* display: flex; */
+    /* display: inline-flex; */
+}
+
+.min-nav li {
+    /* float: left; */
+    display: inline-block;
+    list-style: none;
+    margin: 0 15px;
+    position: relative;
+
+}
+
+.min-nav li a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.min-nav li::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 3px;
+    background-color: darkmagenta;
+    transition: all ease 1.2s;
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+}
+
+.min-nav li:hover::after {
+    width: 100%;
+}
+
+.header-box {
+    position: absolute;
+    top: 32%;
+    text-align: justify;
+    max-width: 60%;
+}
+
+.header-box p {
+    margin-bottom: 35px;
+    max-width: 70%;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.header-box span {
+    color: darkmagenta;
+}
+
+.header-box h4 {
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.btn {
+    border: solid 1px darkmagenta;
+    margin-right: 20px;
+    padding: 10px 30px;
+    background-color: darkmagenta;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: rgb(186, 151, 186);
+    border-radius: 15px 0px 15px 0px;
+}
+
+/* end-header */
+
+
+
+/* start-about */
+section {
+    padding: 50px 0px;
+}
+
+.row {
+    /* display: inline-block; */
+    /* display: inline-flex; */
+    /*
+    flex-direction: ;
+    align-items: center;
+    align-content: flex-start;
+    */
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-right {
+    /* display: block; */
+    /* width: 60%; */
+    /* float: left; */
+    flex-basis: 60%;
+}
+
+.about-left {
+    /* display: block; */
+    /* width: 30%; */
+    /* float: right; */
+    flex-basis: 30%;
+}
+
+.about-left img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.about-left img:hover {
+    cursor: pointer;
+    /*زر الماوس*/
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: darkmagenta;
+    cursor: pointer;
+
+}
+
+.tab-titles {
+    display: flex;
+    margin: 30px 15px;
+}
+
+.tab-link {
+    /* display: inline-block; */
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.tab-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: darkmagenta;
+    transition: .6s;
+}
+
+.tab-link:hover::after {
+    width: 100%;
+}
+
+.tab-link.active-title::after {
+    width: 50%;
+    background-color: blue;
+}
+
+.tab-link.active-title:hover::after {
+    width: 100%;
+    background-color: darkmagenta;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active-tab {
+    display: block;
+}
+
+/* end-about */
+
+
+/* start-services */
+#services h2 {
+    text-align: center;
+
+}
+
+.serv-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 46px;
+}
+
+.service {
+    background-color: #262626;
+    padding: 49px;
+    border-radius: 12px;
+    transition: 1s;
+    opacity: 75%;
+}
+
+.service i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.service h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+
+}
+
+.service p {
+    word-spacing: 8px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.service a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 3px 3px 6px rgb(245, 84, 245);
+}
+
+.service:hover {
+    background-color: darkmagenta;
+    /* transform: translateY(-10px); */
+    /* box-shadow: 0px 5px 35% rgb(245, 84, 245) ;*/
+    transform: scale(1.1);
+    opacity: 100%;
+    /*شفافيه*/
+    /* transform: rotate(360deg); */
+}
+
+/* end-services */
+
+
+#Portfolio h2 {
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.project {
+    background-color: #262626;
+    padding: 40px;
+    border-radius: 15%;
+    width: 100%;
+    position: relative;
+
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8%;
+    transition: transform 1s;
+}
+
+.layer {
+    width: 100%;
+    background: linear-gradient(rgb(0, 0, 0), darkmagenta);
+    border-radius: 20px;
+    height: 0;
+    /*يجب استخدامها*/
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    /*اخفاء المحتوي والسماح باضهاره*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 20px;
+    transition: height 1s;
+    /*خاصيه الاضهار*/
+}
+
+.layer h3 {
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.layer p {
+    line-height: 1.30;
+}
+
+.layer a {
+    color: darkmagenta;
+    background-color: white;
+    text-decoration: none;
+    font-size: 18px;
+    width: 50px;
+    height: 60px;
+    border-radius: 40%;
+    line-height: 60px;
+    margin-top: 30px;
+}
+
+.project:hover img {
+    transform: scale(1.2);
+}
+
+.project:hover .layer {
+    height: 89%;
+    /*اضهار*/
+}
+
+#Portfolio .btn {
+    display: block;
+    width: fit-content;
+    /* تحديد الحجم حسب المكتوب*/
+    margin: 25px auto;
+}
+
+.contact-left {
+    flex-basis: 33%;
+}
+
+.contact-right {
+    flex-basis: 66%;
+}
+
+.contact-left {
+    width: 100%;
+}
+
+.contact-left p {
+    margin-bottom: 30px;
+    color: wheat;
+}
+
+.contact-left i {
+    margin-right: 15px;
+    font-size: 24px;
+    transition: .5s;
+}
+
+.contact-left i:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    color: wheat;
+    font-size: 25px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    color: darkmagenta;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0px;
+    font-size: 15px;
+    background-color: #262626;
+    outline: 0;
+    border: 0;
+    color: wheat;
+    border-radius: 8px;
+}
+
+form .btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+footer {
+    padding: 25px;
+    background: linear-gradient(#262626, #683f3fb2);
+    text-align: center;
+    border-radius: 40%;
+
+}
+
+
+@media (max-width:1250px) {
+    header {
+        background-image: none;
+    }
+}
+
+@media (max-width:600px) {
+    .log {
+        margin: 15px 0;
+    }
+
+    nav {
+        /* width: 380px;
+        text-align: center;
+        background-color: #171411; */
+        /* height: 100%;
+    color: aquamarine; */
+    }
+
+    h1 {
+        font-size: 35px;
+        margin-bottom: 36px;
+    }
+
+    .header-box {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .header-box p {
+        margin-bottom: 35px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width:462px) {
+    nav {
+        width: 380px;
+        text-align: center;
+        background-color: #171411;
+        /* height: 100%; */
+        color: aquamarine;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .min-nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .min-nav li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 15px;
+    }
+
+    .min-nav li {
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .min-nav li a:hover {
+        color: darkmagenta;
+    }
+
+    .min-nav li::after {
+        content: none;
+    }
+
+    .contact-left {
+        flex-basis: 90%;
+        margin-bottom: 20px;
+    }
+
+    .contact-right {
+        flex-basis: 90%;
+    }
+}
